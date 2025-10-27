@@ -1,1 +1,114 @@
-hi
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting...</title>
+<script>
+    (function() {
+        // Structured list of links with weight (1 is lowest, 10 is highest)
+        const allLinksWithWeights = {
+            "The Black Keys": [
+                { url: "https://open.spotify.com/track/1S8PKtVKvJWwOwfQpQxzWV?si=add5ab8253514aca", weight: 3 }, // Money Maker
+                { url: "https://open.spotify.com/track/6DnfupwdspmFT2PYRjFH2F?si=21eefa8541a94810", weight: 3 }, // Stop Stop
+                { url: "https://open.spotify.com/track/5lN1EH25gdiqT1SFALMAq1?si=6f65b71a1eea4c6d", weight: 1 }, // Gold on the Ceiling
+                { url: "https://open.spotify.com/track/50ruR1ueH4wroJBpJOnjQS?si=3f752c9e49f346af", weight: 10 },// Everlasting Light
+                { url: "https://open.spotify.com/track/65PE3GVXjkiQOTM7V7NbfY?si=fe91746e7a0a485e", weight: 5 } // The Only One
+            ],
+            "Tame Impala": [
+                { url: "https://open.spotify.com/track/4t6vrJg7GcUELCAxHX1z5W?si=065b816acce24ee6", weight: 2 }, // Half Glass Full of Wine
+                { url: "https://open.spotify.com/track/3Yub3anoLj8w58TVpEXUJv?si=7099c3a1fafa4b3d", weight: 8 }, // It Is Not Meant To Be
+                { url: "https://open.spotify.com/track/4LD5p1sSp97yp86E2zDZwK?si=8efa75905eed4d71", weight: 3 }, // Desire Be Desire Go
+                { url: "https://open.spotify.com/track/4EC81w5nKG5tZlkHyKT2vO?si=3890fb56582f4957", weight: 6 }, // Lucidity
+                { url: "https://open.spotify.com/track/2a2MbiJN2skOxohykOVcss?si=88913eece8f04950", weight: 2 }, // Solitude Is Bliss
+                { url: "https://open.spotify.com/track/1FnHpM2zimTALdIvuxFoNM?si=6aae5388a41549d6", weight: 1 }, // Expectations
+                { url: "https://open.spotify.com/track/0j0majKoNlF7GkwA8xNQHG?si=62ffd16d8b484134", weight: 4 }, // I Dont Really Mind
+                { url: "https://open.spotify.com/track/0YuePEX4KyfLIPMdNLPwgQ?si=3c0f061c4c5140bf", weight: 3 }, // Endors Toi
+                { url: "https://open.spotify.com/track/0LtOwyZoSNZKJWHqjzADpW?si=ada284abca624682", weight: 2 }, // Feels Like We Only Go Backwards
+                { url: "https://open.spotify.com/track/6qZjm61s6u8Ead9sWxCDro?si=d7b5ebf536af4598", weight: 6 }, // Elephant
+                { url: "https://open.spotify.com/track/2X485T9Z5Ly0xyaghN73ed?si=e5f89090e2234319", weight: 1 }, // Let It Happen
+                { url: "https://open.spotify.com/track/1UYj8qTWjneZJDVjUMwMub?si=a10caa6be46149cf", weight: 10 },// The Moment
+                { url: "https://open.spotify.com/track/2gNfxysfBRfl9Lvi9T3v6R?si=b5e80b1ee3fa465e", weight: 3 }, // Disciples
+                { url: "https://open.spotify.com/track/3I7OmVsk4Hm5LBbs2GmhlD?si=a63363aac3b54234", weight: 8 }, // Reality in Motion
+                { url: "https://open.spotify.com/track/5hM5arv9KDbCHS0k9uqwjr?si=50b8d077b3ba47c0", weight: 3 }, // Borderline
+                { url: "https://open.spotify.com/track/3LbZIhU0smEU5SUnxod4j4?si=b062148f49c34a56", weight: 2 }, // Breathe Deeper
+                { url: "https://open.spotify.com/track/5JWPUEov2wlX7c0jhYZpeB?si=301bd5d17ed14d08", weight: 3 }, // Lost In Yesterday
+                { url: "https://open.spotify.com/track/6RZmhpvukfyeSURhf4kZ0d?si=99c17c11e2f44ad8", weight: 2 } // Is It True
+            ],
+            "Gorillaz": [
+                { url: "https://open.spotify.com/track/1PpfeNl5uYRBhfFcig2Uz6?si=134901d283204dfe", weight: 2 }, // 19-2000
+                { url: "https://open.spotify.com/track/2pw9RZWZibttZzoFhwjuy6?si=869770fd51a34abe", weight: 7 }, // Every Planet We Reach is Dead
+                { url: "https://open.spotify.com/track/3a6PN6BRB8PP3ms48s7kU1?si=ab4a371df38648f4", weight: 9 }, // Empire Ants
+                { url: "https://open.spotify.com/track/3THFKx88trZuOFlssVLJ5G?si=2e6471356ff44bdc", weight: 4 }, // Broken
+                { url: "https://open.spotify.com/track/1dvOwoHwZB9SwvRw2Gv3nz?si=53477ef8972748a4", weight: 9 }  // To Binge
+            ],
+            "Led Zeppelin": [
+                { url: "https://open.spotify.com/track/0kfjZ0JCXU9sSg99gbQpbJ?si=7332146cecf1416d", weight: 6 }, // Good Times Bad Times
+                { url: "https://open.spotify.com/track/3buvRn4CDX86EO9LHTITGn?si=c29f346601034728", weight: 3 }, // Heartbreaker
+                { url: "https://open.spotify.com/track/1oCOp1kVAgNlXX9Tx9mvzq?si=79b6506aaf0f4f08", weight: 8 }, // Ramble On (WEIGHT REDUCED FROM 10)
+                { url: "https://open.spotify.com/track/6fxcpQMUoX0ofnbIHVnVWN?si=2841fb290fff44f9", weight: 2 }, // Out on the Tiles
+                { url: "https://open.spotify.com/track/3i25w2HOWoafnTIiWJCL71?si=91c0463d372e4abd", weight: 2 }  // Fool in the Rain
+            ],
+            "The Police": [
+                { url: "https://open.spotify.com/track/7HjipY3Vy2HAN11D2juKHT?si=9630e58af6b04517", weight: 3 }, // Next To You
+                { url: "https://open.spotify.com/track/1oYYd2gnWZYrt89EBXdFiO?si=b6a998cd16b74221", weight: 6 }, // Message in a bottle
+                { url: "https://open.spotify.com/track/44aTAUBF0g6sMkMNE8I5kd?si=e82a3fd8de0240e8", weight: 6 }  // Every Little Thing She Does Is Magic
+            ],
+            "MF DOOM": [
+                { url: "https://open.spotify.com/track/1JLvr8qmZ6hQM7H6MsIqHV?si=6b84a74f8e83429f", weight: 3 }, // Strange Ways
+                { url: "https://open.spotify.com/track/21O0XXPEWPtePt5RMY93Ob?si=c11d3910d1ab46d0", weight: 3 }  // All Caps
+            ],
+            "Beck": [
+                { url: "https://open.spotify.com/track/2iWfZFAF8BCi0CY4NyuP8D?si=fec256f8a5914d43", weight: 10 },// Gamma Ray
+                { url: "https://open.spotify.com/track/77ucIsMUWo6n744QONXRKf?si=9f0c66cd7d9743ca", weight: 6 }, // Orphans
+                { url: "https://open.spotify.com/track/66xAy3RPBsLjxXSPzz8Flq?si=23ed946ec1cc4d38", weight: 5 }, // Profanity Prayers
+                { url: "https://open.spotify.com/track/1q9cMUK2tKx0eBfCUZw0nV?si=6ce27dee972f4147", weight: 2 }  // Soldier Jane
+            ],
+            "The Strokes": [
+                { url: "https://open.spotify.com/track/1EsgUWQsxGBwnu3NATDjiU?si=124732e0c70f4feb", weight: 7 }, // The Modern Age
+                { url: "https://open.spotify.com/track/7kzKAuUzOITUauHAhoMoxA?si=13a52ae294164a76", weight: 3 }, // Last Nite
+                { url: "https://open.spotify.com/track/2LMloFiV7DHpBhITOaBSam?si=08438adaee9944dc", weight: 8 }, // Hard To Explain
+                { url: "https://open.spotify.com/track/3kKb3U3a8jmUJQB9ypE1Jl?si=ec2609816a1c44d9", weight: 4 }, // Under Control
+                { url: "https://open.spotify.com/track/4fPBB44eDH71YohayI4eKV?si=b528828e221446fd", weight: 6 }, // You Only Live Once
+                { url: "https://open.spotify.com/track/3jjQHULAVn71k40mKwGMiV?si=64085867c906494a", weight: 1 }, // Juicebox
+                { url: "https://open.spotify.com/track/6u0x5ad9ewHvs3z6u9Oe3c?si=99d6ef1ea8654dcf", weight: 6 }, // Under Cover of Darkness
+                { url: "https://open.spotify.com/track/7lu6YLrlB1MU7HW8DJSuPa?si=da27466232524423", weight: 2 }  // At The Door
+            ],
+            "Toco": [
+                { url: "https://open.spotify.com/track/5vAyWyk8hC9DKqGcF7C1q7?si=cfb7da6780794093", weight: 2 }, // Meu Rio
+                { url: "https://open.spotify.com/track/0XdhwShrfjvtaaU1QIhpPe?si=b0525432885c4e51", weight: 2 }, // Bom Motivo
+                { url: "https://open.spotify.com/track/1KLQF1nCs7XhVyJXYYMsIz?si=72de674d2011409b", weight: 1 }, // Rio De Janeiro
+                { url: "https://open.spotify.com/track/6JzzdkQ5qjqR4EDk2yUbto?si=59b78ced27a94554", weight: 3 }  // Estacio De Espirito
+            ]
+        };
+
+        // --- Core Weighted Selection Logic ---
+
+        const weightedList = [];
+
+        // 1. Iterate over all bands and songs
+        for (const band in allLinksWithWeights) {
+            const songs = allLinksWithWeights[band];
+
+            // 2. Add the song's URL to the weightedList 'weight' number of times.
+            songs.forEach(song => {
+                const weight = Math.max(1, Math.floor(song.weight || 1));
+                for (let i = 0; i < weight; i++) {
+                    weightedList.push(song.url);
+                }
+            });
+        }
+        
+        // Check if the list is empty before proceeding
+        if (weightedList.length === 0) {
+            window.location.replace("https://www.google.com"); 
+            return;
+        }
+
+        // 3. Select a random index from the fully expanded weighted list
+        const randomIndex = Math.floor(Math.random() * weightedList.length);
+        
+        // 4. The destination is the selected URL
+        const destination = weightedList[randomIndex];
+
+        // Redirect
+        window.location.replace(destination);
+    })();
+</script>
