@@ -10,6 +10,15 @@
 </head>
 <script>
     (function() {
+
+        // ====================================================
+        // 🔧 SETTINGS
+        // ====================================================
+    
+        // Set this to true if you want every song to be weighted equally
+        const equalWeightMode = false;
+
+      
         // --- Weighted Data Structure ---
         // Top-level keys are Genre Group numbers, with their respective Genre Weight (wt)
         const allGenreGroups = {
@@ -290,47 +299,55 @@
             }
         };
 
+    // ====================================================
+    // 🧠 LOGIC
+    // ====================================================
 
-        // --- Core Weighted Selection Logic (MODIFIED FOR TWO-LEVEL WEIGHTING) ---
+    // Sort each artist’s songs from highest → lowest weight
+    for (const groupKey in allGenreGroups) {
+        const group = allGenreGroups[groupKey];
+        group.artists.forEach(artist => {
+            artist.songs.sort((a, b) => b.weight - a.weight);
+        });
+    }
 
-        const weightedList = [];
+    // Build weighted list
+    const weightedList = [];
+    for (const groupKey in allGenreGroups) {
+        const group = allGenreGroups[groupKey];
+        const groupWeight = equalWeightMode ? 1 : group.wt;
 
-        // 1. Iterate over all Genre Groups
-        for (const groupKey in allGenreGroups) {
-            const group = allGenreGroups[groupKey];
-            const groupWeight = group.wt;
+        group.artists.forEach(artist => {
+            const artistWeight = equalWeightMode ? 1 : (artist.artistWt || 1);
 
-            // 2. Iterate over all Artists in the group (Artist Weight defaults to 1)
-            group.artists.forEach(artist => {
-                const artistWeight = artist.artistWt || 1; // Assuming default Artist Weight of 1
-                
-                // 3. Iterate over all songs in the artist's list
-                artist.songs.forEach(song => {
-                    // 4. Calculate the Final Song Weight Multiplier
-                    const finalWeight = groupWeight * artistWeight * (song.weight || 1);
-                    const weightFactor = Math.max(1, Math.floor(finalWeight));
+            artist.songs.forEach(song => {
+                const songWeight = equalWeightMode ? 1 : (song.weight || 1);
+                const finalWeight = groupWeight * artistWeight * songWeight;
 
-                    // 5. Add the song's URL to the weightedList 'weightFactor' number of times.
-                    for (let i = 0; i < weightFactor; i++) {
-                        weightedList.push(song.url);
-                    }
-                });
+                const weightFactor = Math.max(1, Math.floor(finalWeight));
+                for (let i = 0; i < weightFactor; i++) {
+                    weightedList.push(song.url);
+                }
             });
-        }
-        
-        // Check if the list is empty before proceeding
-        if (weightedList.length === 0) {
-            window.location.replace("https://www.google.com"); 
-            return;
-        }
+        });
+    }
 
-        // 6. Select a random index from the fully expanded weighted list
-        const randomIndex = Math.floor(Math.random() * weightedList.length);
-        
-        // 7. The destination is the selected URL
-        const destination = weightedList[randomIndex];
+    if (weightedList.length === 0) {
+        window.location.replace("https://www.google.com");
+        return;
+    }
 
-        // Redirect
-        window.location.replace(destination);
-    })();
+    // Pick random and redirect
+    const randomIndex = Math.floor(Math.random() * weightedList.length);
+    let destination = weightedList[randomIndex];
+
+    // Cache-busting query string
+    const cacheBuster = `?r=${Date.now()}_${Math.floor(Math.random() * 1000000)}`;
+    destination += (destination.includes('?') ? '&' : '?') + cacheBuster;
+
+    window.location.replace(destination);
+
+})();
 </script>
+</body>
+</html>
