@@ -3,7 +3,7 @@
   <meta charset="utf-8" />
   <title>Redirecting...</title>
 
-  <!-- Prevent browser caching -->
+  <!Prevent browser caching -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -19,7 +19,7 @@
         const equalWeightMode = false;
 
       
-        // --- Weighted Data Structure ---
+        // -Weighted Data Structure ---
         // Top-level keys are Genre Group numbers, with their respective Genre Weight (wt)
         const allGenreGroups = {
             // Group Weight: 10
@@ -49,7 +49,7 @@
                             { url: "https://open.spotify.com/track/0j0majKoNlF7GkwA8xNQHG?si=62ffd16d8b484134", weight: 4 }, // I Dont Really Mind
                             { url: "https://open.spotify.com/track/0YuePEX4KyfLIPMdNLPwgQ?si=3c0f061c4c5140bf", weight: 3 }, // Endors Toi
                             { url: "https://open.spotify.com/track/0LtOwyZoSNZKJWHqjzADpW?si=ada284abca624682", weight: 2 }, // Feels Like We Only Go Backwards
-                            { url: "https://open.spotify.com/track/6qZjm61s6u8Ead9sWxCDro?si=d7b5ebf536af4598", weight: 6 }, // Elephant
+                          { url: "https://open.spotify.com/track/6qZjm61s6u8Ead9sWxCDro?si=d7b5ebf536af4598", weight: 6 }, // Elephant
                             { url: "https://open.spotify.com/track/2X485T9Z5Ly0xyaghN73ed?si=e5f89090e2234319", weight: 1 }, // Let It Happen
                             { url: "https://open.spotify.com/track/1UYj8qTWjneZJDVjUMwMub?si=a10caa6be46149cf", weight: 10 },// The Moment
                             { url: "https://open.spotify.com/track/2gNfxysfBRfl9Lvi9T3v6R?si=b5e80b1ee3fa465e", weight: 3 }, // Disciples
@@ -138,7 +138,15 @@
                     },
                     { 
                         name: "Oasis", 
-                        songs: [] 
+                        songs: [
+                            { url: "https://open.spotify.com/track/6dUfUi14QkuIpGA0GFFPyC?si=439e6aa195354d61", weight: 6 },
+                            { url: "https://open.spotify.com/track/4r0KYf0DDzrUdr9NSwAXpm?si=ad458c0c17df4207", weight: 4 },
+                            { url: "https://open.spotify.com/track/3tQFthLmtBuc0XPL2b8nnu?si=42a53fb11d1b4b03", weight: 3 },
+                            { url: "https://open.spotify.com/track/2VPgz2JGcPeXgPbXH8lztS?si=0e5fc9a76d3f443f", weight: 2 },
+                            { url: "https://open.spotify.com/track/4Q2UM2QSR7Gye03jvl4Rdw?si=301a2056f9664f7d", weight: 1 },
+                            { url: "https://open.spotify.com/track/7fhBLueOkvmTi4EW7tdK23?si=4c576bd1cc5042fc", weight: 1 },
+                            { url: "https://open.spotify.com/track/1C3s37YGNXxK54oCJLbLwY?si=f8a4265bb5a5423e", weight: 2 }
+                        ] 
                     },
                     { 
                         name: "Green Day", 
@@ -196,6 +204,25 @@
                             { url: "https://open.spotify.com/track/0BgbobvykXxEvxo2HhCuvM?si=e62c453407934fc8", weight: 8 }, // Banana Pancakes
                             { url: "https://open.spotify.com/track/44HBcWA1jp22uKjKbwZd7Z?si=deb89dc7c84845b1", weight: 2 }  // Do You Remember
                         ] 
+                    },
+                    {
+                        name: "Bruno Mars",
+                        artistWt: 3,
+                        songs: [
+                          { url: "https://open.spotify.com/track/7MAibcTli4IisCtbHKrGMh?si=49c669e5120043b8", weight: 1 }, // Leave The Door Open
+                            { url: "https://open.spotify.com/track/61YzdCCBPM5Pc7lIiD5i8C?si=86ec18e54b6042f3", weight: 3 }, // Bang Bang
+                            { url: "https://open.spotify.com/track/7hCNBVRhHzcsRAv0TQnOzq?si=e24fb3b31c504941", weight: 1 }, // Runaway Baby
+                            { url: "https://open.spotify.com/track/78Z199FfQHt4VpnJzlYaIe?si=1364f976219d44c1", weight: 7 }, // The Other Side
+                            { url: "https://open.spotify.com/track/3P4v70V3Zt804r2c9dZivK?si=ab5e843ffa9a44ee", weight: 7 } // Somewhere In Brooklyn
+                        ]
+                    },
+                    {
+                        name: "Michael Jackson",
+                        songs: [
+                            { url: "https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm?si=e7ed09f26e6e4472", weight: 5 }, // Baby Be Mine
+                            { url: "https://open.spotify.com/track/6pJSulm9EBmsYGnp3uaEFl?si=e8bbe5eee6d8443e", weight: 3 }, // Leave Me Alone
+                            { url: "https://open.spotify.com/track/46eu3SBuFCXWsPT39Yg3tJ?si=9fd80e6d74f64ce3", weight: 1 } // Dont Stop 'Til You Get Enough
+                        ]
                     }
                 ]
             },
@@ -238,7 +265,7 @@
                         songs: [
                             { url: "https://open.spotify.com/track/6BnY0YochAURSXSR3d5N7O?si=147a361cb6574d4f", weight: 3 }, // Andy You're A Star
                             { url: "https://open.spotify.com/track/1sTsuZTdANkiFd7T34H3nb?si=a89f2256dbd94ee3", weight: 3 }  // Human
-                        ] 
+                      ] 
                     },
                     { 
                         name: "Foster the people", 
@@ -247,6 +274,28 @@
                             { url: "https://open.spotify.com/track/2UyWClHKt6fut3IpS2tJiR?si=0c316ba06d714302", weight: 5 }, // Waste
                             { url: "https://open.spotify.com/track/5fgb3Md1xjt3mxeBqguiIA?si=fc2d5f188d5c425a", weight: 6 }  // I Would Do anything for you
                         ] 
+                    },
+                    {
+                        name: "Stevie Wonder",
+                        songs: [
+                            { url: "https://open.spotify.com/track/1h2xVEoJORqrg71HocgqXd?si=4edf8158442c405a", weight: 3 }, // Superstition
+                            { url: "https://open.spotify.com/track/4pNiE4LCVV74vfIBaUHm1b?si=727c58c2cb4645e3", weight: 7 }, // Sir Duke
+                            { url: "https://open.spotify.com/track/4kP69y3GKHi9tXckfgp4bK?si=add643a663e94104", weight: 7 } // For Once In My Life
+                        ]
+                    },
+                    {
+                        name: "Rolling Stones",
+                        songs: [
+                            { url: "https://open.spotify.com/track/4hupcimlg3UBbW1kAQ6vrT?si=9fb592ddefe6499c", weight: 2 }, // Ruby Tuesday
+                            { url: "https://open.spotify.com/track/1CKvinIoExZec5pv8OHtzU?si=93fb39d215a64b23", weight: 3 } // Get off my cloud
+                        ]
+                    },
+                    {
+                        name: "Pink Floyd",
+                        songs: [
+                            { url: "https://open.spotify.com/track/2YcxeBmk9hvMH7RFFyqnIr?si=1038d56499874776", weight: 7 }, // Remember a Day
+                            { url: "https://open.spotify.com/track/1YZuigG1YcdgbfD7XJoCU5?si=98752c3939024e72", weight: 6 } // See Emily Play
+                        ]
                     }
                 ]
             },
@@ -266,15 +315,27 @@
                     { 
                         name: "Brazilian Bossa", 
                         songs: [
-                            { url: "https://open.spotify.com/track/0PHGV9pWYv91WCeCXhdWye?si=0f3d3ae2518146cb", weight: 4 }, // Triste
+                          { url: "https://open.spotify.com/track/0PHGV9pWYv91WCeCXhdWye?si=0f3d3ae2518146cb", weight: 4 }, // Triste
                             { url: "https://open.spotify.com/track/15ouqiBsgL12olEwP3COsH?si=8965f48ec8a241d1", weight: 8 }, // Aguas de Marco
                             { url: "https://open.spotify.com/track/4SpqtLElDsO6KGbd4ub96Z?si=abca26f3bb334a1b", weight: 4 }, // Pela Luz dos Olhos Teus
-                            { url: "https://open.spotify.com/track/1axUEr2LTBbGLdOUD5I7Z6?si=b120e2bb573f48a2", weight: 8 }  // Sei La
+                            { url: "https://open.spotify.com/track/1axUEr2LTBbGLdOUD5I7Z6?si=b120e2bb573f48a2", weight: 8 },  // Sei La
+                            { url: "https://open.spotify.com/track/6gB156smUnYP9POmPfmtOV?si=0b984279d42a486f", weight: 8 },
+                            { url: "https://open.spotify.com/track/6U03Orwr5Dxt8jahLnQpYV?si=ce3ace0e74174449", weight: 8 } // Mas, Que Nada!
                         ] 
                     },
                     { 
                         name: "The Beatles", 
-                        songs: [] 
+                        songs: [
+                            { url: "https://open.spotify.com/track/1u2yF3CsOvVOMP82AgP2gJ?si=6bbe6945bc354987", weight: 1 },
+                            { url: "https://open.spotify.com/track/2JWP3EPVXHxnYatwaWkf08?si=0b7f3d50446040fb", weight: 4 },
+                            { url: "https://open.spotify.com/track/6p6E3pMc9moSp5kV3BLN0y?si=ff66e89e70ef4f61", weight: 6 },
+                            { url: "https://open.spotify.com/track/0pNeVovbiZHkulpGeOx1Gj?si=dede1a7db6764a52", weight: 2 },
+                            { url: "https://open.spotify.com/track/01SfTM5nfCou5gQL70r6gs?si=619345a5ab9a461b", weight: 2 },
+                            { url: "https://open.spotify.com/track/2jAojvUaPoHPFSPpF0UNRo?si=ce0b91f792d0421c", weight: 3 },
+                            { url: "https://open.spotify.com/track/5XmetMMUFNXClbiYnGdVmP?si=565a6232fa7e46c4", weight: 5 },
+                            { url: "https://open.spotify.com/track/0JBvtprXP2Z0LP3jmzA7Xp?si=b1c3ebdea3be49a6", weight: 2 },
+                            { url: "https://open.spotify.com/track/5iyCSUM7zzficwaGo8GIoc?si=b96ca0438d8241e0", weight: 4 }
+                        ] 
                     }
                 ]
             },
@@ -285,18 +346,73 @@
                 artists: [
                     { 
                         name: "Random", 
-                        songs: [] 
+                        artistWt: 1,
+                        songs: [
+                            { url: "https://open.spotify.com/track/0pfwk53OH0Cy21EZOdqyoe?si=641b7256cffe4a3e", weight: 1 },
+                            { url: "https://open.spotify.com/artist/7Akz0poR4eUgNM0ciCWqIs?si=bf8129b893fd4bee", weight: 1 },
+                            { url: "https://open.spotify.com/track/3YdKJzcoMZMacISlpY4QoP?si=c7d5bb788dd64912", weight: 1 },
+                            { url: "https://open.spotify.com/track/4U0FTuAXotSy6C31KNa0pU?si=78c4b7d7ea95499d", weight: 1 },
+                            { url: "https://open.spotify.com/track/1vAc7e2NMqn9dBNErT9pSd?si=aa5befbb02a44734", weight: 1 },
+                            { url: "https://open.spotify.com/track/5Ou6eHjAeg07Y4s4soNFIs?si=08f2d4f65b364c90", weight: 1 },
+                            { url: "https://open.spotify.com/track/0E5VCfEC70ubAAHfjRasAK?si=420ddba1283a4cb1", weight: 1 },
+                            { url: "https://open.spotify.com/track/2Kg42rmivHQggcXxvAoeyX?si=8dae8f2831a0437a", weight: 1 },
+                            { url: "https://open.spotify.com/track/16KTmSO684ycBlHM3zNqQM?si=306bb6e874d14796", weight: 1 },
+                            { url: "https://open.spotify.com/track/2STQAr3BRiAeeveJ07gZh7?si=baab4a51d6534842", weight: 1 },
+                            { url: "https://open.spotify.com/track/0cs671lxX2eoDzr2KMuo3N?si=987b2311da5c40d7", weight: 1 },
+                            { url: "https://open.spotify.com/track/4vHNeBWDQpVCmGbaccrRzi?si=1a34f64c919646ff", weight: 1 },
+                            { url: "https://open.spotify.com/track/5YUJMvTg4AWHKjqQidTsGK?si=9a7b9b4042da4728", weight: 1 },
+                            { url: "https://open.spotify.com/track/5xC8uOesnn0udeXAYlAnoY?si=8d89bcf278834ae3", weight: 1 },
+                            { url: "https://open.spotify.com/track/3YJx77Xx8JSwEoxqrkQO5c?si=5813167b99ef4561", weight: 1 },
+                            { url: "https://open.spotify.com/track/2KtRbxfn4BjegQCqLeCocu?si=874a570e3d1847a2", weight: 1 },
+                            { url: "https://open.spotify.com/track/0V93bON7wh29gDWYD1AAo5?si=1dd42d18a0614630", weight: 1 },
+                            { url: "https://open.spotify.com/track/5H0laZ62yDUPuKvHef8niK?si=afaa886fb5b14e70", weight: 1 },
+                            { url: "https://open.spotify.com/track/5huLMzIzFEdVcvEzt2hfk1?si=c0a7579797d6480c", weight: 1 },
+                            { url: "https://open.spotify.com/track/4QSApTviyQ3hxg9C6qnA32?si=bb481966306f496c", weight: 1 },
+                            { url: "https://open.spotify.com/track/2AdRSHeYmDGMrgIfiS2w7K?si=8d99b742b4aa42ea", weight: 1 },
+                            { url: "https://open.spotify.com/track/4Vx8R95QgJdPOuXrGXc15G?si=20520323905c49c1", weight: 2 },
+                            { url: "https://open.spotify.com/track/1HuAR7RyNWQq6vHwOFHWqx?si=8057961930d34aba", weight: 1 },
+                            { url: "https://open.spotify.com/track/4cNXSDkigr8GtLUshdM3H8?si=2bbf55502851405c", weight: 1 },
+                            { url: "https://open.spotify.com/track/2oEnePysbHXrX4oC34x612?si=4576f7abf60d4d44", weight: 1 },
+                            { url: "https://open.spotify.com/track/0RjG5JmdOWXAR68dGlKBA5?si=73940f7c3e6042b1", weight: 10 },
+                            { url: "https://open.spotify.com/track/3OUaTEgKLHVIb0ZMavyPY7?si=51e83c423a5442ae", weight: 1 },
+                            { url: "https://open.spotify.com/track/6o2nroFoqAxj7kSWLo6AGb?si=aedc80e1ba6e49e0", weight: 1 },
+                            { url: "https://open.spotify.com/track/40SBS57su9xLiE1WqkXOVr?si=88dea0220afc4a04", weight: 1 },
+                            { url: "https://open.spotify.com/track/2IJftBfq7pJ43tfnOR0RB3?si=a633c236314e441e", weight: 1 },
+                            { url: "https://open.spotify.com/track/4c6vZqYHFur11FbWATIJ9P?si=bc8e89cc56aa43e4", weight: 1 },
+                            { url: "https://open.spotify.com/track/2aBlUbXgWMFXAcPrSDO6mz?si=d454de738d8341c3", weight: 1 },
+                            { url: "https://open.spotify.com/track/1RMJOxR6GRPsBHL8qeC2ux?si=6293e1bb1eba464d", weight: 8 },
+                            { url: "https://open.spotify.com/track/5khUNWckizKC1tDTRRjvJp?si=c3431cb534544b54", weight: 1 },
+                            { url: "https://open.spotify.com/track/5kAtUmSCUHpEqON05Wrmht?si=4f90dd57dabb4e7a", weight: 1 },
+                            { url: "https://open.spotify.com/track/6tAHoWuZoM6QprTo61SBne?si=0aa8cfb3bf104218", weight: 10 },
+                            { url: "https://open.spotify.com/track/3pf96IFggfQuT6Gafqx2rt?si=37cf856127674e8a", weight: 1 },
+                            { url: "https://open.spotify.com/track/1DrlLvlYd1FIjNavRm6NdX?si=166606200b5e4b1f", weight: 1 },
+                            { url: "https://open.spotify.com/track/5p6xhgQCwzX0G9PadMU9GA?si=d6422f576d27462a", weight: 1 },
+                            { url: "https://open.spotify.com/track/1n7xFAY4xoPeqRvrkzAtsw?si=d9840f0bd4674eb3", weight: 1 },
+                            { url: "https://open.spotify.com/track/4jHzeOQqosZR5qNqJzEeHm?si=30b946fc1a2a4f47", weight: 1 },
+                            { url: "https://open.spotify.com/track/66tkDkPsznE5zIHNt4QkXB?si=271b764f86504ea1", weight: 1 },
+                            { url: "https://open.spotify.com/track/2RlgNHKcydI9sayD2Df2xp?si=ed13c8f20d5f43f5", weight: 1 }
+                        ] 
                     },
                     { 
                         name: "Brazilian Indie", 
                         songs: [
                             { url: "https://open.spotify.com/track/352FuGmGJClPjojSYjNrXG?si=05e20c7d4d724f59", weight: 8 }, // Ja Sei Namorar
                             { url: "https://open.spotify.com/track/0lGEWOZvMexZFXckBJxlVO?si=049896d1e5bf49fc", weight: 3 }, // A minha menina
-                            { url: "https://open.spotify.com/track/1LR5KBD64oRzGEjQhAMNdj?si=3bf3d30053b1455b", weight: 10 } // Boa sorte
+                            { url: "httpsg://open.spotify.com/track/1LR5KBD64oRzGEjQhAMNdj?si=3bf3d30053b1455b", weight: 10 }, // Boa sorte
+                            { url: "https://open.spotify.com/track/2aQ8NyRJcsQFgb8jwUil90?si=6b103beab3f445ac", weight: 8 }
+                        ]
+                    },
+                    {
+                        name: "Noisettes",
+                        artistWt: 3,
+                        songs: [
+                            { url: "https://open.spotify.com/track/3xxmjMvJsSR3L7mUOxP9QA?si=daeef0d076e54e6c", weight: 8 },
+                            { url: "https://open.spotify.com/track/3stxDdznXcWyHBA9DDwsnQ?si=6677742740f94004", weight: 9 },
+                            { url: "httpss://open.spotify.com/track/3mJGbCUHxjXwRgAP1emheW?si=0250ab8076f24722", weight: 2 }
                         ]
                     }
                 ]
-            }
+              }
         };
 
     // ====================================================
@@ -306,7 +422,7 @@
     // Sort each artist’s songs from highest → lowest weight
     for (const groupKey in allGenreGroups) {
         const group = allGenreGroups[groupKey];
-        group.artists.forEach(artist => {
+              group.artists.forEach(artist => {
             artist.songs.sort((a, b) => b.weight - a.weight);
         });
     }
@@ -325,12 +441,12 @@
                 const finalWeight = groupWeight * artistWeight * songWeight;
 
                 const weightFactor = Math.max(1, Math.floor(finalWeight));
-                for (let i = 0; i < weightFactor; i++) {
+                    for (let i = 0; i < weightFactor; i++) {
                     weightedList.push(song.url);
                 }
             });
         });
-    }
+  Example}
 
     if (weightedList.length === 0) {
         window.location.replace("https://www.google.com");
@@ -344,7 +460,6 @@
     // Cache-busting query string
     const cacheBuster = `?r=${Date.now()}_${Math.floor(Math.random() * 1000000)}`;
     destination += (destination.includes('?') ? '&' : '?') + cacheBuster;
-
     window.location.replace(destination);
 
 })();
